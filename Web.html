@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolores Cycles Club</title>
+    <link rel="icon" href="Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="WebStyle.css"> 
+    
+</head>
+<div id="header">
+    <img src="Logo.png" alt="Logo del club">
+    <h1>Dolores Cycles Club</h1>
+</div>
+<body>
+   <header>
+        <div class="container__menu">
+            <nav>
+                <ul>
+                <li><a href="#" onclick="showSection('membership')">HAZTE SOCIO</a></li>
+                <li><a href="#" onclick="showSection('equipo')">EQUIPO</a></li>
+                <li><a href="#" onclick="showSection('temp')">TEMPORADA 2023-2024</a></li>
+                <li><a href="#" onclick="showSection('comision')">COMISION</a></li>
+                <li><a href="#" onclick="showSection('sponsors')">SPONSORS</a></li>
+                <li><a href="#" onclick="showSection('about')">SOBRE NOSOTROS</a></li>
+                </ul>
+            </nav>
+        </div>
+   </header>
+   <section id="inicio" class="inicio" style="display: block;">
+    <div class="container-inicio"></div>
+</section>
+
+
+<section id="about" class="sec" style="display: none;">
+    <div class="container-sec">
+        <h2>Sobre Nosotros</h2>
+        <p>Inserta aquí información sobre el club, su historia, logros, etc.</p>
+    </div>
+</section>
+
+<section id="equipo" class="sec" style="display: none;">
+    <div class="container-sec">
+        <h2>Equipo</h2>
+        <p>Inserta aquí información sobre el club, su historia, logros, etc.</p>
+    </div>
+</section>
+
+<section id="temp" class="sec" style="display: none;">
+    <div class="container-sec">
+        <h2>Temporada</h2>
+        <p>Inserta aquí información sobre el club, su historia, logros, etc.</p>
+    </div>
+</section>
+
+<section id="comision" class="sec" style="display: none;">
+    <div class="container-sec">
+        <h2>Comisión</h2>
+        <p>Inserta aquí información sobre el club, su historia, logros, etc.</p>
+    </div>
+</section>
+
+<section id="sponsors" class="sec" style="display: none;">
+    <div class="container-sec">
+        <h2>sponsors</h2>
+        <p>Inserta aquí información sobre el club, su historia, logros, etc.</p>
+    </div>
+</section>
+
+<section id="membership" class="membership" style="display: none;">
+<div class="container">
+    <h1>Formulario de Suscripción</h1>
+    <form action="#">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+
+        <label for="celular">Celular:</label>
+        <input type="text" id="celular" name="celular" placeholder="Celular" required>
+
+        <label for="tarjeta">Datos de la Tarjeta:</label>
+        <input type="text" id="tarjeta" name="tarjeta" placeholder="Número de tarjeta" required>
+
+        <button type="submit">Suscribirse</button>
+    </form>
+    <div class="precio">
+        <p>El precio mensual es: $150 </p>
+    </div>
+</div>
+</section>
+   <div class="container-footer">
+    <p>&copy; 2024 Dolores Cycles Club. Todos los derechos reservados.</p>
+</div>
+
+<script>
+    function showSection(sectionId) {
+        // Ocultar todas las secciones
+        var sections = document.querySelectorAll('section');
+        sections.forEach(function(section) {
+            section.style.display = 'none';
+        });
+        // Mostrar la sección deseada
+        var selectedSection = document.getElementById(sectionId);
+        if (selectedSection) {
+            selectedSection.style.display = 'block';
+        }
+    }
+</script>
+</body>
+</html>
